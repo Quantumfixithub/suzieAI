@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - SUZIAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #f5f7fa; color: #333; padding-bottom: 20px; }
+        .header { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); color: #fff; padding: 15px 20px; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: #D4AF37; font-size: 24px; cursor: pointer; text-decoration: none; }
+        .header-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #D4AF37; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; font-weight: 600; color: #0A1628; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; }
+        .help-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+        .help-item { padding: 20px; background: rgba(212, 175, 55, 0.05); border-radius: 12px; text-align: center; text-decoration: none; color: #333; transition: all 0.3s; }
+        .help-item:hover { background: rgba(212, 175, 55, 0.1); transform: translateY(-2px); }
+        .help-icon { font-size: 36px; margin-bottom: 10px; }
+        .help-title { font-size: 14px; font-weight: 600; color: #0A1628; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="settings.html" class="back-btn">←</a>
+        <div class="header-title">Help & Support</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="section-title">How Can We Help?</h2>
+            <div class="help-grid">
+                <a href="faq.html" class="help-item">
+                    <div class="help-icon">❓</div>
+                    <div class="help-title">FAQ</div>
+                </a>
+                <a href="contact.html" class="help-item">
+                    <div class="help-icon">💬</div>
+                    <div class="help-title">Contact Us</div>
+                </a>
+                <a href="about.html" class="help-item">
+                    <div class="help-icon">ℹ️</div>
+                    <div class="help-title">About</div>
+                </a>
+                <a href="terms.html" class="help-item">
+                    <div class="help-icon">📄</div>
+                    <div class="help-title">Terms</div>
+                </a>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Popular Topics</h2>
+            <div style="font-size: 14px; line-height: 2; color: #666;">
+                <a href="faq.html" style="display: block; color: #D4AF37; text-decoration: none;">→ How to deposit funds</a>
+                <a href="faq.html" style="display: block; color: #D4AF37; text-decoration: none;">→ How to withdraw</a>
+                <a href="faq.html" style="display: block; color: #D4AF37; text-decoration: none;">→ VIP levels explained</a>
+                <a href="faq.html" style="display: block; color: #D4AF37; text-decoration: none;">→ Referral program</a>
+                <a href="faq.html" style="display: block; color: #D4AF37; text-decoration: none;">→ Account security</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

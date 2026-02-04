@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Check-in - SUZIAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #f5f7fa; color: #333; padding-bottom: 20px; }
+        .header { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); color: #fff; padding: 15px 20px; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: #D4AF37; font-size: 24px; cursor: pointer; text-decoration: none; }
+        .header-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #D4AF37; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; font-weight: 600; color: #0A1628; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; text-align: center; }
+        .streak-box { background: linear-gradient(135deg, #D4AF37 0%, #F4E4A6 100%); border-radius: 12px; padding: 20px; text-align: center; margin-bottom: 25px; }
+        .streak-value { font-size: 48px; font-weight: 700; color: #0A1628; font-family: 'Cormorant Garamond', serif; }
+        .streak-label { font-size: 14px; color: #0A1628; opacity: 0.8; }
+        .calendar-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; margin-bottom: 20px; }
+        .day-box { aspect-ratio: 1; background: rgba(212, 175, 55, 0.05); border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px; }
+        .day-box.checked { background: linear-gradient(135deg, #D4AF37, #F4E4A6); }
+        .day-box.today { border: 2px solid #D4AF37; }
+        .day-number { font-size: 16px; font-weight: 700; color: #0A1628; margin-bottom: 5px; }
+        .day-reward { font-size: 11px; color: #666; }
+        .btn { width: 100%; padding: 15px; background: linear-gradient(135deg, #D4AF37 0%, #F4E4A6 100%); border: none; border-radius: 12px; color: #0A1628; font-size: 16px; font-weight: 600; cursor: pointer; text-transform: uppercase; letter-spacing: 1px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4); }
+        .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html" class="back-btn">←</a>
+        <div class="header-title">Daily Check-in</div>
+    </div>
+
+    <div class="container">
+        <div class="streak-box">
+            <div class="streak-value">3</div>
+            <div class="streak-label">Day Streak</div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Check-in Calendar</h2>
+            <div class="calendar-grid">
+                <div class="day-box checked">
+                    <div class="day-number">1</div>
+                    <div class="day-reward">$1</div>
+                </div>
+                <div class="day-box checked">
+                    <div class="day-number">2</div>
+                    <div class="day-reward">$2</div>
+                </div>
+                <div class="day-box checked">
+                    <div class="day-number">3</div>
+                    <div class="day-reward">$3</div>
+                </div>
+                <div class="day-box today">
+                    <div class="day-number">4</div>
+                    <div class="day-reward">$4</div>
+                </div>
+                <div class="day-box">
+                    <div class="day-number">5</div>
+                    <div class="day-reward">$5</div>
+                </div>
+                <div class="day-box">
+                    <div class="day-number">6</div>
+                    <div class="day-reward">$6</div>
+                </div>
+                <div class="day-box">
+                    <div class="day-number">7</div>
+                    <div class="day-reward">$10</div>
+                </div>
+            </div>
+
+            <button class="btn" onclick="checkin()">Check In Today</button>
+        </div>
+    </div>
+
+    <script>
+        function checkin() {
+            alert('Checked in! You earned $4');
+        }
+    </script>
+</body>
+</html>

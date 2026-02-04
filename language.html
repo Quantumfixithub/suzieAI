@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language - SUZIAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #f5f7fa; color: #333; padding-bottom: 20px; }
+        .header { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); color: #fff; padding: 15px 20px; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: #D4AF37; font-size: 24px; cursor: pointer; text-decoration: none; }
+        .header-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #D4AF37; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; font-weight: 600; color: #0A1628; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; }
+        .language-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid #f0f0f0; cursor: pointer; transition: all 0.2s; }
+        .language-item:last-child { border-bottom: none; }
+        .language-item:hover { background: rgba(212, 175, 55, 0.02); }
+        .language-info { display: flex; align-items: center; gap: 15px; }
+        .language-flag { font-size: 28px; }
+        .language-name { font-size: 16px; font-weight: 600; color: #0A1628; }
+        .language-check { color: #D4AF37; font-size: 20px; visibility: hidden; }
+        .language-item.active .language-check { visibility: visible; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="settings.html" class="back-btn">←</a>
+        <div class="header-title">Language</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h2 class="section-title">Select Language</h2>
+
+            <div class="language-item active" onclick="selectLanguage(this, 'en')">
+                <div class="language-info">
+                    <div class="language-flag">🇺🇸</div>
+                    <div class="language-name">English</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'es')">
+                <div class="language-info">
+                    <div class="language-flag">🇪🇸</div>
+                    <div class="language-name">Español</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'fr')">
+                <div class="language-info">
+                    <div class="language-flag">🇫🇷</div>
+                    <div class="language-name">Français</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'de')">
+                <div class="language-info">
+                    <div class="language-flag">🇩🇪</div>
+                    <div class="language-name">Deutsch</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'zh')">
+                <div class="language-info">
+                    <div class="language-flag">🇨🇳</div>
+                    <div class="language-name">中文</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'ja')">
+                <div class="language-info">
+                    <div class="language-flag">🇯🇵</div>
+                    <div class="language-name">日本語</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'ko')">
+                <div class="language-info">
+                    <div class="language-flag">🇰🇷</div>
+                    <div class="language-name">한국어</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'pt')">
+                <div class="language-info">
+                    <div class="language-flag">🇵🇹</div>
+                    <div class="language-name">Português</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'ru')">
+                <div class="language-info">
+                    <div class="language-flag">🇷🇺</div>
+                    <div class="language-name">Русский</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+
+            <div class="language-item" onclick="selectLanguage(this, 'ar')">
+                <div class="language-info">
+                    <div class="language-flag">🇸🇦</div>
+                    <div class="language-name">العربية</div>
+                </div>
+                <div class="language-check">✓</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function selectLanguage(element, lang) {
+            document.querySelectorAll('.language-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+            localStorage.setItem('language', lang);
+            setTimeout(() => {
+                alert('Language changed successfully!');
+            }, 300);
+        }
+    </script>
+</body>
+</html>

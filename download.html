@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download App - SUZIAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #f5f7fa; color: #333; padding-bottom: 20px; }
+        .header { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); color: #fff; padding: 15px 20px; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: #D4AF37; font-size: 24px; cursor: pointer; text-decoration: none; }
+        .header-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #D4AF37; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .hero-card { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); border-radius: 20px; padding: 40px; text-align: center; color: #fff; margin-bottom: 20px; }
+        .app-icon { font-size: 80px; margin-bottom: 20px; }
+        .app-title { font-size: 32px; font-weight: 700; color: #D4AF37; font-family: 'Cormorant Garamond', serif; margin-bottom: 10px; }
+        .app-subtitle { font-size: 14px; color: rgba(255, 255, 255, 0.8); }
+        .card { background: #fff; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 20px; font-weight: 600; color: #0A1628; margin-bottom: 15px; font-family: 'Cormorant Garamond', serif; }
+        .download-btn { display: flex; align-items: center; gap: 15px; padding: 18px; background: #000; color: #fff; border-radius: 12px; text-decoration: none; margin-bottom: 12px; transition: all 0.3s; }
+        .download-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
+        .download-btn.android { background: #3ddc84; color: #000; }
+        .download-icon { font-size: 36px; }
+        .download-info h3 { font-size: 16px; font-weight: 600; margin-bottom: 3px; }
+        .download-info p { font-size: 12px; opacity: 0.8; }
+        .qr-section { text-align: center; padding: 20px; }
+        .qr-box { width: 200px; height: 200px; background: #f0f0f0; border-radius: 12px; margin: 0 auto 15px; display: flex; align-items: center; justify-content: center; font-size: 80px; }
+        .qr-text { font-size: 13px; color: #666; }
+        .features-list { font-size: 14px; line-height: 2; color: #666; }
+        .features-list li { list-style-position: inside; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="settings.html" class="back-btn">←</a>
+        <div class="header-title">Download App</div>
+    </div>
+
+    <div class="container">
+        <div class="hero-card">
+            <div class="app-icon">📱</div>
+            <div class="app-title">SUZIAI</div>
+            <div class="app-subtitle">Download our mobile app for the best experience</div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Get the App</h2>
+
+            <a href="#" class="download-btn">
+                <div class="download-icon">🍎</div>
+                <div class="download-info">
+                    <h3>Download on the</h3>
+                    <p>App Store</p>
+                </div>
+            </a>
+
+            <a href="#" class="download-btn android">
+                <div class="download-icon">🤖</div>
+                <div class="download-info">
+                    <h3>GET IT ON</h3>
+                    <p>Google Play</p>
+                </div>
+            </a>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">Scan QR Code</h2>
+            <div class="qr-section">
+                <div class="qr-box">📱</div>
+                <div class="qr-text">Scan with your camera to download</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">App Features</h2>
+            <ul class="features-list">
+                <li>Fast and secure transactions</li>
+                <li>Real-time notifications</li>
+                <li>Biometric login</li>
+                <li>Easy portfolio management</li>
+                <li>24/7 customer support</li>
+                <li>Offline mode for viewing</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

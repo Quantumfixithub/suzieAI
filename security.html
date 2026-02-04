@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Settings - SUZIAI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #f5f7fa; color: #333; padding-bottom: 20px; }
+        .header { background: linear-gradient(135deg, #0A1628 0%, #1a2942 100%); color: #fff; padding: 15px 20px; display: flex; align-items: center; gap: 15px; }
+        .back-btn { background: none; border: none; color: #D4AF37; font-size: 24px; cursor: pointer; text-decoration: none; }
+        .header-title { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: #D4AF37; }
+        .container { max-width: 600px; margin: 0 auto; padding: 20px; }
+        .card { background: #fff; border-radius: 16px; padding: 25px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .section-title { font-size: 18px; font-weight: 600; color: #0A1628; margin-bottom: 15px; }
+        .security-item { display: flex; justify-content: space-between; align-items: center; padding: 18px 0; border-bottom: 1px solid #f0f0f0; }
+        .security-item:last-child { border-bottom: none; }
+        .security-info h4 { font-size: 15px; font-weight: 600; color: #0A1628; margin-bottom: 5px; }
+        .security-info p { font-size: 13px; color: #999; }
+        .toggle-switch { position: relative; width: 50px; height: 28px; background: #ddd; border-radius: 14px; cursor: pointer; }
+        .toggle-switch.active { background: #D4AF37; }
+        .toggle-switch::after { content: ''; position: absolute; width: 24px; height: 24px; background: #fff; border-radius: 50%; top: 2px; left: 2px; transition: left 0.3s; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+        .toggle-switch.active::after { left: 24px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="settings.html" class="back-btn">←</a>
+        <div class="header-title">Security Settings</div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3 class="section-title">Account Security</h3>
+
+            <div class="security-item">
+                <div class="security-info">
+                    <h4>Two-Factor Authentication (2FA)</h4>
+                    <p>Extra security for your account</p>
+                </div>
+                <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+            </div>
+
+            <div class="security-item">
+                <div class="security-info">
+                    <h4>Biometric Login</h4>
+                    <p>Use fingerprint or face ID</p>
+                </div>
+                <div class="toggle-switch" onclick="this.classList.toggle('active')"></div>
+            </div>
+
+            <div class="security-item">
+                <div class="security-info">
+                    <h4>Login Alerts</h4>
+                    <p>Get notified of new logins</p>
+                </div>
+                <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+            </div>
+
+            <div class="security-item">
+                <div class="security-info">
+                    <h4>Withdrawal Verification</h4>
+                    <p>Require verification for withdrawals</p>
+                </div>
+                <div class="toggle-switch active" onclick="this.classList.toggle('active')"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
